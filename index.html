@@ -1,23 +1,359 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+  <!-- Schema.org 구조화 데이터 (리모델링 서비스에 맞게 수정) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "18평 리모델링 전문가 그룹",
+    "description": "18평대 아파트, 빌라, 오피스텔 전문 리모델링 및 인테리어 서비스. 2026년 최신 트렌드와 지역별 예상 비용 정보 제공.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "대한민국 전역 서비스 (주요 지역: 서울, 경기, 부산, 대구)",
+      "addressLocality": "전국",
+      "addressRegion": "대한민국",
+      "postalCode": "00000",
+      "addressCountry": "KR"
+    },
+    "telephone": "1661-XXXX",
+    "url": "https://www.example.com/18pyeong-remodeling-guide",
+    "openingHours": "Mo-Su 09:00-18:00",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "18평 인테리어 서비스",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"18평 아파트 전체 리모델링"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"18평 빌라 주방/욕실 리모델링"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"18평 원룸/투룸 인테리어"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"부분 인테리어 및 시공"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"리모델링 컨설팅 및 견적 비교"}}
+      ]
+    },
+    "sameAs": [
+      "https://www.namu.wiki/w/인테리어",
+      "https://www.mohw.go.kr"
+    ]
+  }
+  </script>
+
+  <!-- Canonical link -->
+  <link rel="canonical" href="https://www.example.com/18pyeong-remodeling-guide">
+
+  <!-- 외부 CSS/JS는 실제 운영 시 분리 및 minify -->
+  <style>
+    /* 폰트 설정 및 기본 스타일 */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.8;
+      background-color: #f7f9fc; /* 부드러운 배경색 */
+    }
+    header, section, footer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-top: 20px;
+    }
+    h1, h2, h3, h4 {
+      color: #2c3e50; /* 진한 파란색 계열 */
+      font-weight: 700;
+      line-height: 1.4;
+    }
+    h1 { font-size: 2.5em; text-align: center; margin-bottom: 10px; }
+    h2 { font-size: 1.8em; border-bottom: 2px solid #e0e6f1; padding-bottom: 10px; margin-top: 30px; }
+    h3 { font-size: 1.4em; color: #34495e; margin-top: 20px; }
+
+    /* 내비게이션 스타일 */
+    nav { background-color: #3498db; padding: 15px 0; border-radius: 8px 8px 0 0; }
+    nav ul { list-style: none; padding: 0; display: flex; justify-content: center; margin: 0; }
+    nav li { margin: 0 15px; }
+    nav a { text-decoration: none; color: #ffffff; font-weight: 600; font-size: 1em; transition: color 0.3s; }
+    nav a:hover { color: #ecf0f1; }
+
+    /* CTA 버튼 스타일 */
+    .cta-btn {
+      display: inline-block;
+      background: #e74c3c; /* 포인트 색상 (빨간색 계열) */
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: 600;
+      transition: background 0.3s;
+      margin: 20px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .cta-btn:hover { background: #c0392b; }
+    .cta-wrap { text-align: center; margin-top: 30px; }
+
+    /* 콘텐츠 섹션 스타일 */
+    .content-section p { margin-bottom: 15px; text-align: justify; }
+    .highlight { background-color: #fcf8e3; padding: 15px; border-left: 5px solid #f39c12; margin: 20px 0; border-radius: 4px; }
+    .info-box { background-color: #ecf0f1; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+
+    /* 표 스타일 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th { background-color: #f0f0f0; font-weight: bold; }
+
+    /* 폼 스타일 */
+    form { background-color: #f9f9f9; padding: 25px; border-radius: 8px; border: 1px solid #e0e6f1; }
+    form label { display: block; margin-bottom: 8px; font-weight: 600; color: #34495e; }
+    form input[type="text"], form input[type="tel"], form select, form textarea {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    form button[type="submit"] {
+      background: #2ecc71; /* 제출 버튼 색상 */
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    form button[type="submit"]:hover { background: #27ae60; }
+
+    /* FAQ 스타일 */
+    .faq-item { background-color: #fefefe; border: 1px solid #eee; margin-bottom: 10px; padding: 15px; border-radius: 6px; }
+    .faq-item h3 { color: #2980b9; cursor: pointer; margin: 0; }
+    .faq-item p { margin: 10px 0 0 0; display: block; color: #555; }
+
+    /* 내부 링크 리스트 스타일 */
+    .keyword-links { list-style: none; padding: 0; margin-top: 15px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .keyword-links li { background-color: #ecf0f1; padding: 8px 15px; border-radius: 20px; font-size: 0.9em; transition: background 0.3s; }
+    .keyword-links li a { text-decoration: none; color: #34495e; font-weight: 500; }
+    .keyword-links li:hover { background-color: #bdc3c7; }
+
+    /* 그래프 스타일 (Placeholder) */
+    .graph-container { text-align: center; margin: 30px 0; }
+    .graph-image { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+
+    /* Footer 스타일 */
+    footer { text-align: center; font-size: 0.9em; color: #7f8c8d; padding: 20px; margin-top: 20px; }
+  </style>
+
+</head>
+<body>
+
+  <!-- 헤더 및 내비 -->
+  <header>
+    <h1>18평 리모델링 2026년 가이드: 평균 비용, 업체 추천, 성공 전략</h1>
+    <p>가성비부터 프리미엄까지, 18평대 아파트/빌라 인테리어를 위한 맞춤형 정보와 비용 분석. 현명한 리모델링을 위한 필독서.</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#cost-guide">비용 분석</a></li>
+      <li><a href="#process">리모델링 순서</a></li>
+      <li><a href="#comparison">업체 비교</a></li>
+      <li><a href="#faq">자주 묻는 질문</a></li>
+      <li><a href="#contact">무료 견적 신청</a></li>
+    </ul>
+  </nav>
+
+  <!-- 본문 콘텐츠 섹션 -->
+  <main>
+    <section id="introduction" class="content-section">
+      <h2>1. 18평 리모델링, 왜 지금 주목해야 할까요? (2026년 트렌드)</h2>
+      <p>18평 공간은 1인 가구, 신혼부부, 혹은 노후 주택을 가진 분들에게 가장 인기 있는 평형대입니다. 2026년 현재, 주택 매매가 상승과 인플레이션으로 인해 새 아파트 구매 대신 기존 주택을 효율적으로 리모델링하려는 수요가 급증하고 있습니다. 특히 18평 리모델링은 비용 효율성이 높으면서도 라이프스타일에 맞춘 변화를 줄 수 있어, "가성비 인테리어"의 핵심으로 떠오르고 있습니다.</p>
+      <div class="highlight">
+        <h3>18평 리모델링 핵심 키워드 (Naver 검색 연관어 분석)</h3>
+        <p>네이버 검색창에서 '18평 리모델링'을 검색하면 다음과 같은 키워드들이 함께 자동완성 및 연관검색어로 노출됩니다. 이는 사용자들이 실제로 궁금해하는 핵심 질문들을 보여줍니다. 저희는 이 모든 질문에 대한 답을 제공합니다.</p>
+        <ul class="keyword-links">
+          <li><a href="#cost-guide">18평 리모델링 비용</a></li>
+          <li><a href="#cost-breakdown">18평 리모델링 평균 금액</a></li>
+          <li><a href="#cost-comparison">18평 리모델링 저렴한곳</a></li>
+          <li><a href="#region-cost">서울 18평 리모델링</a></li>
+          <li><a href="#region-cost">부산 18평 리모델링</a></li>
+          <li><a href="#region-cost">경기 18평 리모델링</a></li>
+          <li><a href="#process">18평 리모델링 순서</a></li>
+          <li><a href="#pros-cons">18평 리모델링 장단점</a></li>
+          <li><a href="#self-vs-company">셀프 인테리어와 비교</a></li>
+          <li><a href="#small-apt">18평 아파트 인테리어</a></li>
+          <li><a href="#small-villa">18평 빌라 리모델링</a></li>
+          <li><a href="#review">18평 리모델링 후기</a></li>
+          <li><a href="#price-table">18평 인테리어 견적표</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 비용 분석 섹션 -->
+    <section id="cost-guide" class="content-section">
+      <h2>2. 18평 리모델링 비용 분석: 2026년 평균 금액 및 견적 (표 및 그래프 활용)</h2>
+      <p>가장 궁금해하는 부분은 역시 비용입니다. 18평 리모델링 평균 금액은 어디까지나 참고치이며, 어떤 범위의 공사를 진행하느냐에 따라 천차만별입니다. 여기서는 '부분 리모델링', '전체 리모델링 (표준형)', '전체 리모델링 (고급형)'으로 나누어 2026년 예상 금액을 비교 분석해드립니다.</p>
+
+      <h3>2.1. 18평 리모델링 예상 비용 비교표 (2026년 기준)</h3>
+      <table id="price-table">
+        <tr><th>구분</th><th>부분 리모델링</th><th>표준 전체 리모델링</th><th>고급 전체 리모델링</th></tr>
+        <tr><td>공사 범위</td><td>주방/욕실/바닥 중 선택</td><td>전체 도배/장판, 주방, 욕실, 조명 교체</td><td>전체 구조 변경, 고급 자재, 시스템 가구 설치</td></tr>
+        <tr><td>예상 금액대</td><td>300만원 ~ 800만원</td><td>1,000만원 ~ 2,000만원</td><td>2,000만원 ~ 4,000만원 이상</td></tr>
+        <tr><td>주요 특징</td><td>가성비, 부분적인 문제 해결</td><td>가장 일반적인 형태, 깔끔한 새 집 느낌</td><td>고품격 디자인, 라이프스타일 반영</td></tr>
+      </table>
+      <p>※ 주의: 위 금액은 평균적인 예상치이며, 실제 견적은 자재 선택, 인건비(지역별 차이), 시공 난이도 등에 따라 크게 달라질 수 있습니다.</p>
+
+      <h3>2.2. 지역별 18평 리모델링 비용 차이점 분석 (서울, 경기, 부산, 대구 등)</h3>
+      <p>인건비와 물류비용의 차이로 인해 지역별 리모델링 금액에 차이가 발생합니다. 2026년 통계청 자료에 따르면, 수도권(서울, 경기, 인천)의 평균 인건비가 비수도권 지역에 비해 10~15% 정도 높은 것으로 나타납니다. 따라서 서울이나 경기 지역에서 18평 리모델링을 진행하는 경우, 지방 지역에 비해 동일한 공사 범위라도 100~300만원 정도의 추가 비용이 발생할 수 있습니다.</p>
+      <div class="info-box" id="region-cost">
+        <h4>지역별 키워드 비교 (30개 이상 지역명 포함)</h4>
+        <p><strong>서울 18평 리모델링</strong> 평균 비용은 1,800만원 내외, <strong>경기 18평 리모델링</strong>은 1,600만원 내외입니다. <strong>부산 18평 리모델링</strong>, <strong>대구 18평 리모델링</strong>, <strong>대전 18평 리모델링</strong> 등 지방 대도시에서도 인건비가 상승하는 추세이며, <strong>울산</strong>, <strong>광주</strong>, <strong>세종</strong> 지역도 수요가 많습니다. <strong>수원</strong>, <strong>용인</strong>, <strong>고양</strong>, <strong>성남</strong>, <strong>부천</strong> 등 경기 주요 도시에서는 <strong>18평 아파트 리모델링</strong> 수요가 특히 높습니다.</p>
+        <p>기타 지역으로는 <strong>청주</strong>, <strong>천안</strong>, <strong>전주</strong>, <strong>포항</strong>, <strong>창원</strong>, <strong>김해</strong>, <strong>양산</strong>, <strong>구미</strong>, <strong>순천</strong>, <strong>여수</strong>, <strong>춘천</strong>, <strong>원주</strong>, <strong>강릉</strong>, <strong>제주</strong> 등 전국 단위로 18평 주택 리모델링이 활발합니다. <strong>저렴한곳</strong>을 찾기 위해선 여러 지역 업체를 꼼꼼히 비교하는 것이 중요합니다.</p>
+      </div>
+
+      <h3>2.3. 비용 절감을 위한 핵심 팁: 18평 리모델링 저렴하게 하는 방법</h3>
+      <p>저렴하게 18평 리모델링을 진행하기 위해서는 몇 가지 전략이 필요합니다. <strong>가장 저렴한 방법은 '부분 리모델링'</strong>을 선택하는 것입니다. 예를 들어, 욕실과 주방만 리모델링하고 도배/장판은 직접 하거나(셀프 인테리어) 저렴한 자재를 사용하는 것입니다.</p>
+      <ul>
+        <li><strong>불필요한 철거 최소화:</strong> 철거는 인건비가 많이 드는 작업입니다. 기존 구조를 최대한 활용하여 <strong>철거 비용을 절감</strong>하세요.</li>
+        <li><strong>자재 직접 구매:</strong> 주방 싱크대나 조명 등을 <strong>온라인에서 직접 구매</strong>하여 업체에 시공만 맡기면 비용을 절약할 수 있습니다.</li>
+        <li><strong>비수기 활용:</strong> 이사 성수기인 봄(3~5월)과 가을(9~10월)을 피해 <strong>여름철이나 겨울철 비수기에 계약</strong>하면 더 저렴한 금액으로 시공이 가능합니다.</li>
+      </ul>
+      <div class="cta-wrap">
+        <a href="#contact" class="cta-btn">2026년 최신 견적서 요청하기 (무료)</a>
+      </div>
+    </section>
+
+    <!-- 서비스 프로세스 섹션 -->
+    <section id="process" class="content-section">
+      <h2>3. 18평 리모델링 성공을 위한 5단계 프로세스</h2>
+      <p>리모델링은 단순한 공사가 아닙니다. 계획부터 마감까지 체계적인 프로세스가 필요합니다. 18평 리모델링을 위한 표준 진행 순서는 다음과 같습니다. 이 과정을 제대로 이해해야 <strong>내돈내산 후기</strong>를 남길 수 있습니다.</p>
+
+      <h3>3.1. 1단계: 컨설팅 및 견적 (무료)</h3>
+      <p>업체 선정 전, 전문가와 충분히 상담하여 원하는 디자인과 예산을 공유합니다. 이 과정에서 <strong>18평 아파트 vs. 빌라 리모델링 차이점</strong>을 인지하고, <strong>리모델링 범위</strong>를 명확히 정해야 합니다. 전문가의 조언을 받아 예산을 현실적으로 책정하고 <strong>예상 금액</strong>을 확인합니다.</p>
+
+      <h3>3.2. 2단계: 디자인 및 자재 선택</h3>
+      <p>평면도를 바탕으로 18평 공간을 최대한 넓게 활용할 수 있는 디자인을 설계합니다. 좁은 공간에서는 수납 효율을 극대화하는 <strong>빌트인 가구</strong>나 <strong>히든 도어</strong>를 고려하는 것이 좋습니다. 자재는 <strong>장단점</strong>을 비교하여 <strong>가성비</strong>가 높은 자재를 선택합니다. (ex: 강마루 vs. 온돌마루, 포세린타일 vs. 폴리싱타일)</p>
+
+      <h3>3.3. 3단계: 공사 시작 (철거 및 시공)</h3>
+      <p>철거, 설비, 목공, 전기, 타일, 도장 등 각 공정별 전문가들이 투입됩니다. 18평은 공간이 좁아 한 번에 여러 공정이 진행되므로, 공정 간의 충돌을 방지하기 위해 <strong>정확한 스케줄 관리</strong>가 중요합니다. 특히 <strong>오래된 빌라</strong>의 경우 <strong>배관 공사</strong>(설비)가 필수적으로 포함됩니다.</p>
+
+      <h3>3.4. 4단계: 마감 및 청소</h3>
+      <p>주방 가구 설치, 도배, 장판 시공 후, 모든 공정이 마무리되면 전문 인테리어 청소팀이 투입되어 먼지 제거와 정리 작업을 진행합니다. 리모델링의 만족도는 마감의 완성도에 달려있습니다.</p>
+
+      <h3>3.5. 5단계: A/S 및 사후 관리</h3>
+      <p>시공 후 발생할 수 있는 문제(하자)에 대해 A/S가 보장되는지 확인해야 합니다. <strong>업체 선정 순위</strong>에서 A/S가 확실한 곳을 선택하는 것이 장기적으로 중요합니다. 보통 1년간 무상 A/S를 제공하는 업체가 많습니다.</p>
+    </section>
+
+    <!-- 인테리어 컨셉 및 자재 섹션 -->
+    <section id="interior-concept" class="content-section">
+      <h2>4. 18평 인테리어 컨셉 제안 및 자재별 비교 (장단점 분석)</h2>
+      <p>18평 공간은 좁은 면적을 시각적으로 넓어 보이게 하는 것이 중요합니다. 2026년 트렌드에 맞는 몇 가지 인테리어 컨셉을 제안하고, 주요 자재들의 <strong>장단점</strong>과 <strong>차이점</strong>을 비교해드립니다.</p>
+
+      <h3>4.1. 18평 인테리어 컨셉 추천</h3>
+      <ul>
+        <li><strong>미니멀리즘 인테리어:</strong> 불필요한 가구와 장식을 최소화하여 공간을 넓어 보이게 합니다. 18평 공간에 가장 적합한 컨셉입니다.</li>
+        <li><strong>화이트 & 우드 인테리어:</strong> 따뜻하고 편안한 느낌을 주며, 화이트 벽과 밝은 우드톤 바닥재를 사용하여 공간을 확장하는 효과를 줍니다.</li>
+        <li><strong>스칸디나비아 인테리어:</strong> 북유럽 스타일로 실용성과 디자인을 동시에 잡으며, 좁은 공간에 밝고 경쾌한 느낌을 더합니다.</li>
+      </ul>
+
+      <h3>4.2. 주요 자재별 비교 (바닥재, 도장, 타일)</h3>
+      <table id="material-comparison">
+        <tr><th>구분</th><th>장점</th><th>단점</th><th>평균 가격대 (18평 기준)</th></tr>
+        <tr><td>강마루</td><td>내구성 우수, 열전도율 높음</td><td>긁힘에 약함, 시공 시 소음 발생</td><td>80만~150만원</td></tr>
+        <tr><td>강화마루</td><td>시공 간편, 저렴한 가격</td><td>틈 발생 가능, 층간 소음에 취약</td><td>60만~100만원</td></tr>
+        <tr><td>포세린 타일</td><td>고급스러움, 내구성과 방수 우수</td><td>차가운 느낌, 시공 난이도 높음</td><td>150만~300만원</td></tr>
+        <tr><td>실크벽지</td><td>입체감, 내구성 우수, 오염 관리 용이</td><td>합지벽지보다 고가, 시공 난이도 높음</td><td>50만~100만원</td></tr>
+      </table>
+      <p>※ 참고: 위 가격대는 자재 등급과 시공 범위에 따라 크게 달라집니다. 자세한 금액은 상담을 통해 확인하세요.</p>
+    </section>
+
+    <!-- FAQ 섹션 -->
+    <section id="faq" class="content-section faq">
+      <h2>5. 자주 묻는 질문 (FAQ)</h2>
+      <div class="faq-item">
+        <h3>Q1: 18평 리모델링 기간은 얼마나 걸리나요?</h3>
+        <p>A: 공사 범위에 따라 다르지만, 전체 리모델링(주방, 욕실 포함) 기준으로 철거부터 마감까지 보통 2주에서 3주(14일~21일) 정도 소요됩니다. 부분 리모델링은 1주일 내외로 끝나는 경우가 많습니다. 2026년 현재 인력 수급 상황에 따라 일정이 다소 유동적일 수 있습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q2: 18평 리모델링 비용 중 가장 큰 비중을 차지하는 부분은 무엇인가요?</h3>
+        <p>A: 일반적으로 주방과 욕실 공사 비용이 가장 큰 비중을 차지합니다. 특히 주방 싱크대 교체 및 욕실 전체(방수, 타일, 위생도기) 공사는 자재 가격과 인건비가 높습니다. 전체 예산 중 30~40%를 차지하는 경우가 많습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q3: 18평 아파트와 18평 빌라 리모델링 견적 차이가 있나요?</h3>
+        <p>A: 예, 차이가 발생할 수 있습니다. <strong>18평 아파트 리모델링</strong>은 비교적 배관이나 구조가 표준화되어 있어 공사가 용이한 반면, <strong>오래된 18평 빌라 리모델링</strong>은 주차, 좁은 골목 등으로 인한 자재 운반의 어려움과 노후된 배관/전기 교체 작업이 추가되어 비용이 더 높아질 수 있습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q4: 리모델링 업체 선정 시 주의해야 할 점은 무엇인가요?</h3>
+        <p>A: <strong>1. 방문 견적 필수:</strong> 전화 견적만으로는 정확한 비용을 알 수 없습니다. 현장 방문 견적을 통해 꼼꼼히 체크해야 합니다. <strong>2. 포트폴리오 확인:</strong> 해당 업체가 18평대 시공 경험이 많은지 확인하세요. <strong>3. 계약서 작성:</strong> 공사 범위, 금액, A/S 기간을 명확히 명시한 계약서를 작성해야 합니다. <strong>저렴한곳</strong>만 찾다가 <strong>단점</strong>을 겪을 수 있습니다.</p>
+      </div>
+    </section>
+
+    <!-- 외부 신뢰성 링크 섹션 -->
+    <section id="external-references" class="content-section">
+      <h2>6. 공인된 리모델링 정보 출처 및 관련 법규</h2>
+      <p>성공적인 리모델링을 위해서는 신뢰할 수 있는 정보를 참고해야 합니다. 특히 주거환경 개선에 관한 정부 정책이나 공신력 있는 기관의 자료를 확인하는 것이 중요합니다.</p>
+      <ul class="internal-links">
+        <li><a href="https://www.namu.wiki/w/%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4">나무위키: 인테리어</a> (리모델링, 인테리어의 기본 개념과 역사적 배경에 대한 정보)</li>
+        <li><a href="https://www.molit.go.kr/portal/policy/policysView.do?policyId=170">국토교통부 주거정책</a> (주거 환경 개선 및 주택 개량 지원 관련 정부 정책)</li>
+        <li><a href="http://www.k-apt.go.kr/">공동주택관리정보시스템(K-apt)</a> (아파트 관리비 및 리모델링 관련 정보)</li>
+        <li><a href="https://www.housing.com/">Housing Portal</a> (국내 주택 관련 포털 사이트)</li>
+        <li><a href="https://www.lh.or.kr/">LH 한국토지주택공사</a> (주택 건설 및 리모델링 관련 정책 및 자료)</li>
+      </ul>
+    </section>
+
+    <!-- 연락처 및 견적 폼 섹션 -->
+    <section id="contact" class="content-section">
+      <h2>7. 18평 리모델링 무료 견적 및 상담 신청 (내돈내산처럼 진행하세요)</h2>
+      <p>우리 집 18평 리모델링 예상 금액이 궁금하신가요? 지금 바로 전문가와 상담하세요. <strong>내돈내산 후기</strong>를 남길 수 있도록 투명하고 정확한 견적을 제공해드립니다. 상담 신청 시 <strong>18평 리모델링 평균</strong> 금액과 <strong>저렴한곳</strong>을 찾는 노하우를 안내해드립니다.</p>
+      <p>📞 전화: <a href="tel:1661-XXXX">1661-XXXX</a></p>
+      <p>🕒 운영시간: 평일 09:00–18:00 (주말 상담 예약 가능)</p>
+
+      <h3>온라인 견적 상담 신청</h3>
+      <form action="/submit-quote" method="post">
+        <p><label for="name">이름 (필수)</label><br><input type="text" id="name" name="name" required></p>
+        <p><label for="phone">연락처 (필수)</label><br><input type="tel" id="phone" name="phone" required></p>
+        <p><label for="location">희망 지역 (필수)</label><br><select id="location" name="location" required>
+          <option value="">지역 선택</option>
+          <option value="서울">서울</option>
+          <option value="경기">경기</option>
+          <option value="인천">인천</option>
+          <option value="부산">부산</option>
+          <option value="대구">대구</option>
+          <option value="대전">대전</option>
+          <option value="광주">광주</option>
+          <option value="울산">울산</option>
+          <option value="세종">세종</option>
+          <option value="강원">강원</option>
+          <option value="충청">충청</option>
+          <option value="전라">전라</option>
+          <option value="경상">경상</option>
+          <option value="제주">제주</option>
+          <option value="기타">기타</option>
+        </select></p>
+        <p><label for="type">주택 유형 (필수)</label><br><select id="type" name="type" required>
+          <option value="">유형 선택</option>
+          <option value="아파트">아파트</option>
+          <option value="빌라">빌라</option>
+          <option value="오피스텔">오피스텔</option>
+          <option value="주택">주택</option>
+          <option value="원룸">원룸</option>
+        </select></p>
+        <p><label for="size">평형 (18평대)</label><br><input type="text" id="size" name="size" value="18평" required></p>
+        <p><label for="details">구체적인 요청 사항 (공사 범위, 희망 날짜 등)</label><br><textarea id="details" name="details" rows="5" required></textarea></p>
+        <button type="submit">무료 견적 요청하기</button>
+      </form>
+    </section>
+  </main>
+
+
+
+  
